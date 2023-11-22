@@ -5,6 +5,7 @@ if(NOT WIN32)
   if(NOT CMAKE_CXX_STANDARD)
     set(CMAKE_CXX_STANDARD 14)
   endif()
+
   if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     add_compile_options(-Wall -Wextra -Wpedantic)
   endif()
@@ -13,6 +14,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 set(msg_files
@@ -38,7 +40,7 @@ set(msg_files
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
-  DEPENDENCIES std_msgs geometry_msgs
+  DEPENDENCIES std_msgs geometry_msgs sensor_msgs
   ADD_LINTER_TESTS)
 
 install(DIRECTORY include/${PROJECT_NAME}/
@@ -55,7 +57,9 @@ if(BUILD_TESTING)
   target_link_libraries(vision_msgs_test
     ${geometry_msgs_TARGETS}
     ${std_msgs_TARGETS}
+    ${sensor_msgs_TARGETS}
   )
+
   # TODO(sloretz) rosidl_generate_interfaces() should make using generated messages in same project simpler
   target_include_directories(vision_msgs_test PUBLIC
     include
