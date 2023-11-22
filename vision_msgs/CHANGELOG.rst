@@ -1,6 +1,10 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Changelog for package vision_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4.2.0 (2023-11-22)
+------------------
+* Added Mask2D and Mask2DArray.
+* Contributors: Alberto Tudela y Ósca Pons.
 
 4.0.0 (2022-03-19)
 ------------------

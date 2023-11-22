@@ -32,6 +32,8 @@ set(msg_files
   msg/Point2D.msg
   msg/Pose2D.msg
   msg/VisionInfo.msg
+  msg/Mask2D.msg
+  msg/Mask2DArray.msg
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
