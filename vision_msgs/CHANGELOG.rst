@@ -1,10 +1,16 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Changelog for package vision_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+4.3.0 (2024-12-19)
+------------------
+* Remove Mask2D and Mask2DArray.
+* Inserted mask into Detection2D.
+
 4.2.0 (2023-11-22)
 ------------------
 * Added Mask2D and Mask2DArray.
-* Contributors: Alberto Tudela y Ósca Pons.
+* Contributors: Alberto Tudela y Óscar Pons.
 
 4.0.0 (2022-03-19)
 ------------------
