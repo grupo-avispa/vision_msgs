@@ -21,3 +21,8 @@ string id
 # If you need to access them, use an exact or approximate time synchronizer in
 # your code, as this message's header should match the header of the source
 # data.
+
+# Segmentation mask for the object. This is a binary mask that indicates
+# which pixels in the image are part of the object. The mask is stored as an image
+# with the same size as the original image with a single channel of type uint8.
+sensor_msgs/Image mask
